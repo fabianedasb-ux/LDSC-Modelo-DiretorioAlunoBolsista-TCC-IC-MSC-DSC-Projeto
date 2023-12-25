@@ -1,88 +1,83 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass abntex2
 \begin_preamble
-\usepackage{fancyhdr}
-\pagestyle{fancyplain}
+%\usepackage{fancyhdr}  % Permite uso de cabeçalhos e rodapés com mais recursos
+%\pagestyle{fancyplain} % Define estilo de página
 
 % ---
 % Pacotes básicos 
 % ---
+%Fontes
 %\usepackage{lmodern}	% Usa a fonte Latin Modern	
-\usepackage {helvet}
-\renewcommand {\familydefault}{\sfdefault}
-\renewenvironment{center}{\par\centering}{\par}		
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+%\renewenvironment{center}{\par\centering}{\par}		
+
+
 \usepackage[T1]{fontenc}	% Selecao de codigos de fonte.
-\usepackage[utf8]{inputenc}	% Codificacao do documento (conversão automática dos acentos)
+%\usepackage[utf8]{inputenc}	% Codificacao do documento (conversão automática dos acentos)
+%\usepackage{hyph-pt-br} % pacote hyphenação
+%\usepackage{hyph-utf8}
+%\usepackage{hyphen-pt-BR}
 \usepackage{lastpage}	% Usado pela Ficha catalográfica
 \usepackage{indentfirst}	% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}	% Controle das cores
 \usepackage{graphicx}	% Inclusão de gráficos
-\usepackage{microtype} 	% para melhorias de justificação
 % ---
+%\usepackage[brazil]{babel}
 
 % ---
 % Pacotes de citações
 % ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}	% Citações padrão ABNT
-
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+%\usepackage[brazilian]{backref}	 % Paginas com as citações na bibl
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0, abnt-etal-text=it]{abntex2cite}	% Citações padrão ABNT
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
-
-% ---
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
-% Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-\ifcase #1 %
-Nenhuma citação no texto.%
-\or
-Citado na página #2.%
-\else
-Citado #1 vezes nas páginas #2.%
-\fi}%
-% ---
 
 % --- 
 % Espaçamentos entre linhas e parágrafos 
 % --- 
 
 % O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.3cm}
+%\setlength{\parindent}{1.3cm}
 
 % Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+%\setlength{\parskip}{0.2cm}  % tente também \onelineskip
 \end_preamble
-\options 12pt, openright, oneside, a4paper, english,  spanish, brazil
+\options openright, 
 \use_default_options true
 \maintain_unincluded_children false
 \language brazilian
 \language_package default
-\inputencoding utf8
+\inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\float_placement h
+\paperfontsize 11
 \spacing single
 \use_hyperref false
 \pdf_title "Título da Monografia - Dissertação"
@@ -98,6 +93,7 @@ Citado #1 vezes nas páginas #2.%
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
+\pdf_quoted_options "pdftex,unicode=true"
 \papersize a4paper
 \use_geometry false
 \use_package amsmath 1
@@ -112,25 +108,35 @@ Citado #1 vezes nas páginas #2.%
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
-\biblio_style plain
+\biblio_style abntex2-alf
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth 3
-\tocdepth 3
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\secnumdepth 1
+\tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
-\papersides 1
-\paperpagestyle companion
+\papersides 2
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -148,6 +154,10 @@ filename "Cap0-Capa.lyx"
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -157,7 +167,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Sumário} 
 \backslash
@@ -178,6 +188,10 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -187,7 +201,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Lista de Figuras} 
 \backslash
@@ -207,6 +221,10 @@ rhead{}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -216,7 +234,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Lista de Tabelas} 
 \backslash
@@ -349,6 +367,10 @@ filename "Cap7-Conclusoes.lyx"
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -359,7 +381,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Referências} 
 \backslash
@@ -407,6 +429,8 @@ filename "Cap-Apendice_B.lyx"
 \begin_inset CommandInset index_print
 LatexCommand printindex
 type "idx"
+name "Index"
+literal "true"
 
 \end_inset
 

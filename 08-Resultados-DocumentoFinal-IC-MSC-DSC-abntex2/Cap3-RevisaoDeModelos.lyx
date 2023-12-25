@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass abntex2
 \use_default_options true
 \maintain_unincluded_children false
@@ -9,16 +11,18 @@
 \language_package default
 \inputencoding utf8
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -48,6 +52,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -56,7 +61,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -96,7 +104,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{
 \backslash
@@ -195,8 +203,9 @@ Veja a seguir exemplo de inclusão de Figura.
 \end_layout
 
 \begin_layout Itemize
-No LyX 2.00, vá em "Inserir-Flutuante-Figura" (também pode clicar no ícone
- "Inserir Flutuante Figura").
+No \SpecialChar LyX
+ 2.00, vá em "Inserir-Flutuante-Figura" (também pode clicar no ícone "Inserir
+ Flutuante Figura").
 \end_layout
 
 \begin_layout Itemize
@@ -207,22 +216,32 @@ Dentro do box "float:figure" ou "flutuante: Figura" você deve incluir o
 
 \begin_layout Itemize
 a seguir inclua um "label-rótulo", que será utilizado para referência cruzada.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-No LyX 2.0 vá em "Inserir etiqueta" ou pressione o botão "Inserir Legenda".
+No \SpecialChar LyX
+ 2.0 vá em "Inserir etiqueta" ou pressione o botão "Inserir Legenda".
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
 acima do titulo coloque a figura.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-No LyX 2.0 vá em "Inserir Gráficos" ou click no ícone "Inserir Gráficos".
+No \SpecialChar LyX
+ 2.0 vá em "Inserir Gráficos" ou click no ícone "Inserir Gráficos".
 \end_layout
 
 \begin_layout Itemize
@@ -242,8 +261,11 @@ Dica: no canto superior esquerdo do box que contém a figura, existe um texto
  Ao clicar com o botão esquerdo do mouse neste box, o mesmo é iconizado.
  Repota o click para retornar ao estado anterior.
  Ao clicar com o botão direito, abre-se um diálogo em que é possível selecionar
- a opção [ X ] Aqui definitivamente, se quizer obrigar o LyX/TeX-LaTeX a
- colocar a figura aqui.
+ a opção [ X ] Aqui definitivamente, se quizer obrigar o \SpecialChar LyX
+/\SpecialChar TeX
+-\SpecialChar LaTeX
+ a colocar a
+ figura aqui.
 \end_layout
 
 \begin_layout Itemize
@@ -566,6 +588,7 @@ x
 LatexCommand nomenclature
 symbol "x"
 description "Um ponto de coordenada (x,y)"
+literal "true"
 
 \end_inset
 
@@ -599,6 +622,7 @@ x
 LatexCommand nomenclature
 symbol "FF(x)"
 description "Função de fase "
+literal "true"
 
 \end_inset
 
@@ -696,6 +720,10 @@ reference "eq_porosidade-1"
 \begin_layout Itemize
 NOTA IMPORTANTE: Toda vez que o termo de uma equação aparecer pela primeira
  vez deve ser definido da sequinte forma:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -747,6 +775,10 @@ Veja abaixo um caso ERRADO:
 
 \begin_layout Itemize
 A equação é dada por
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -841,8 +873,8 @@ onde
 \end_inset
 
  é a função de fase anteriormente descrita.
- Observe que a função autocorrelação fornece a probabi\SpecialChar \-
-li\SpecialChar \-
+ Observe que a função autocorrelação fornece a probabi\SpecialChar softhyphen
+li\SpecialChar softhyphen
 dade de intersecção
  na direção 
 \series bold
@@ -1022,6 +1054,7 @@ Este é outro exemplo de citação
 \begin_inset CommandInset citation
 LatexCommand cite
 key "adb-tese"
+literal "true"
 
 \end_inset
 
@@ -1093,6 +1126,10 @@ Quando colocamos o mouse dentro da tabela, aparece uma barra de tarefas
  na parte de baixo do Lyx, que nos permite manipular alguns aspectos da
  tabela.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1139,7 +1176,7 @@ name "tab:Exemplo-de-tabela"
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1466,7 +1503,7 @@ name "tab:Exemplo-de-tabela-2"
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="20" columns="11">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">

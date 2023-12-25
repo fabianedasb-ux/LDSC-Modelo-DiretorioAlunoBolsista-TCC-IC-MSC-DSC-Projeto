@@ -14,6 +14,7 @@ O que é?
 Este arquivo mostra como esta organizado o diretório ModeloDiretorio-Aluno-Bolsista-TCC-IC-MSC-DSC-Projeto.
 
 O objetivo é fornecer uma estrutura de diretório que facilite o desenvolvimento de seu IC, da sua dissertação ou do seu doutorado.
+
 A ideia é que o aluno não perca tempo com tarefas repetivivas e consiga focar mais no seu trabalho.
 
 Um modelo de projeto de tese e de documento de tese, no formato TeX/LaTeX, para uso com o editor LyX também é fornecido.
@@ -82,19 +83,23 @@ Estrutura do diretório:
 |   |-- leiame.txt..............Coloque aqui, de forma estruturada e com nomes coerentes, todos os arquivos utilizados/desenvolvidos.
 
 
-
 Nota sobre LyX:
 ===============
-	O lyx esta disponibilizado em http://www.lyx.org.
+	O lyx esta disponibilizado no site http://www.lyx.org.
 	Baixe a versão mais recente.
 	Instale.
 	Leia o tutorial.
 	Se tiver dúvidas procure seus colegas, vários já sabem usar o lyx.
 	Se continuar com dúvidas procure o monitor.
-	Se continuar com dúvidas me procure.
-	
+	Se continuar com dúvidas procure o Professor André Bueno.
 
-	Dica para usuários Windows:
+	Instalação no GNU/Linux:
+	==============================
+	No Fedora instale o LyX usando o comando:
+	dnf install lyx 
+	Vai instalar os pacotes: lyx lyx-common lyx-fonts
+
+	Instalação no Windows:
 	==============================
 	- Se for usar o Windows instale a versão completa do LyX, disponível no site:
 	http://wiki.lyx.org/Windows/Windows
@@ -104,19 +109,92 @@ Nota sobre LyX:
 	This installer requires that LaTeX (MikTeX or TeXLive) are already installed.
 
 	Bundle with MiKTeX: LyX-2.1.4-Bundle-1.exe (215 MB). 
-	This installer is designed for new users, additionally to the standard 	installer, 
+	This installer is designed for new users, additionally to the standard installer, 
 	it includes MiKTeX and as Option the bibliography manager JabRef.
-	Ou seja, a versão completa, com mais de 200 MB vem completa, instale esta!
+	Ou seja, esta versão ten 200 MB e é completa, instale esta!
+	Se instalar a versão menor em diversas situações o LyX irá solicitar a instalação de algum pacote 
+	que esteja faltando, o que é chato e requer internet funcionando.
 
-	Dica abntex:
-	=============
-	Se após a instalação do LyX o abntex não funcionar tente instalar o pacote abntex-lyx-0.8-2.noarch.
+Nota sobre o abntex 1 e 2:
+==========================
+	No final de 2013 saiu o pacote abntex2, por este motivo a pasta 
+	08-Resultados-DocumentoFinal-IC-MSC-DSC tem duas versões.
+	Uma compatível com abntex1 e outra com abntex2.
 
-	Dica usuário GNU/Linux
-	=======================
-	Na minha máquina tenho instalado os seguintes pacotes:
+	Se estiver usando um sistema anterior a 2013, que não tem suporte ao abntex2, você provavelmente 
+	precisa instalar o pacote abntex-lyx-0.8-2.noarch que é o abntex1.
+
+	Se estiver usando um sistema mais recente (depois de 2013) seu empacotamento latex já 
+	inclui suporte ao abntex2. 
+
+	Se você usa o texlive verifique se o pacote texlive-abntex2 esta instalado:
+	dnf install texlive-abntex2
+
+	
+	Informações adicionais sobre abntex:
+	====================================
+	Descrição do pacote abntex: 
+		http://www.abntex.net.br/
+
+	Instalação do pacote abntex2 (link para instalação no Windows): 
+		https://github.com/abntex/abntex2/wiki/Instalacao
+
+	Instalação do pacote abntex2 no GNU/Linux/Fedora 
+		https://github.com/abntex/abntex2/wiki/InstalacaoLinux
+		Comando: dnf install texlive-abntex2 
+	
+	Instalação do suporte a visualização do abntex2 no LyX
+		https://github.com/abntex/abntex2/wiki/LyX
+		Comando: dnf install abntex2-lyx (não existe mais)
+
+		Outra opção é baixar o arquivo:
+		https://github.com/abntex/abntex2-contrib/tree/master/lyx/2.2.X/abntex2.layout
+		e salvar no diretório /usr/share/lyx/layouts/abntex2.layout
+
+	Instalação pacotes específicos usados no modelo de TCC/Dissertação/Tese do LENEP
+	dnf install texlive-lastpage 
+
+	Nota importante: Como instalamos primeiro o LyX e depois os pacotes do abntex, precisamos reconfigurar o LyX, abra o LyX, vá em Ferramentas->Reconfigurar e depois feche o LyX. Isto fará com que o LyX procure na instalação do TeX/LaTeX coisas novas, lá irá encontrar o abntex2 e o abntex2-lyx. De tal forma que o modelo de TCC/Dissertação/Doutorado irá passar a funcionar.
+	
+
+
+Pacotes instalados:
+====================
+
+	Pacotes instalados antes de 2013 (Fedora 21):
+	=============================================
+	Na minha máquina antiga com Fedora-21 tinha instalados os seguintes pacotes (abntex1):
 	abntex-lyx-0.8-2.noarch
 	lyx-common-2.1.3-1.fc21.noarch
 	lyx-2.1.3-1.fc21.x86_64
 	lyx-fonts-2.1.3-1.fc21.noarch
 
+	Pacotes instalados depois de 2013 (Fedora 26):
+	==============================================
+	Na minha máquina nova com Fedora-26 tenho instalado os seguintes pacotes:
+	# rpm -qa | egrep abnt
+	texlive-abntex2-svn39913-33.fc26.2.noarch
+	# rpm -qa | egrep lyx
+	lyx-common-2.2.3-1.fc26.noarch
+	lyx-fonts-2.2.3-1.fc26.noarch
+	lyx-2.2.3-1.fc26.x86_64
+
+	Os arquivos do abntex2 foram instalados aqui:
+	/usr/share/texlive/texmf-dist/tex/latex/abntex2/
+	abntex2abrev.sty  abntex2cite.sty  abntex2.cls
+
+
+
+***************Problemas
+
+====================08-Resultados-DocumentoFinal-IC-MSC-DSC-abntex2-TestadoFedora26-NÃOFUNCIONA
+The package hyperref has already been loaded with options:
+  []
+There has now been an attempt to load it with options
+  [unicode=true]
+Adding the global options:
+  ,unicode=true
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+====================

@@ -1,8 +1,10 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
-\textclass abnt
+\save_transient_properties true
+\origin unavailable
+\textclass ../../../../../../../Dropbox/05-Gestao/Modelos/1-ModelosDiretorios/ModeloDiretorio-Aluno-Bolsista-TCC-IC-MSC-DSC-Projeto-GIT/04-Projeto-Defesa-Poster/01-Projeto/abnt
 \begin_preamble
 \usepackage {graphicx}
 \usepackage {longtable}
@@ -50,16 +52,18 @@
 \language_package default
 \inputencoding iso8859-1
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -102,6 +106,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Índice
 \shortcut idx
 \color #008000
@@ -116,7 +121,10 @@
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
@@ -135,7 +143,8 @@
 status open
 
 \begin_layout Plain Layout
-Não se atenha ao modelo; leia o tutorial do LyX que é em português!
+Não se atenha ao modelo; leia o tutorial do \SpecialChar LyX
+ que é em português!
 \end_layout
 
 \end_inset
@@ -160,6 +169,37 @@ lhead{Sumário}
 chead{} 
 \backslash
 rhead{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align block
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lfoot{SeuNomeAqui} 
+\backslash
+rfoot{
+\backslash
+today }
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+inclui no doc seu nome e data impressão; importante para o revisor!
 \end_layout
 
 \end_inset
@@ -254,11 +294,14 @@ Existem duas maneiras de gerar a nomenclatura:
 \end_layout
 
 \begin_layout Plain Layout
-2) - A partir do LyX 2.0 existe a opção de inserir lista de nomenclatura(Inserir-
->ListaIndice->Nomenclatura).
+2) - A partir do \SpecialChar LyX
+ 2.0 existe a opção de inserir lista de nomenclatura(Inserir->Li
+staIndice->Nomenclatura).
  Neste caso, você precisa indicar, ao longo da monografia/dissertação/tese,
  o que entra na nomenclatura.
- O LyX/LaTeX automaticamente monta a nomenclatura para você.
+ O \SpecialChar LyX
+/\SpecialChar LaTeX
+ automaticamente monta a nomenclatura para você.
  Se usar esta opção o arquivo nomenclatura deve ser retirado do arquivo
  master.
  PS: ainda não usei esta opção!
@@ -422,6 +465,10 @@ o passo a passo de como vai fazer pesquisa.
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -450,8 +497,9 @@ rhead{}
 \noindent
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
+btprint "btPrintCited"
 bibfiles "bibliografia"
-options "abnt-alf"
+options "apalike"
 
 \end_inset
 
@@ -543,6 +591,8 @@ Some aí um bom documento de apresentação, com apresentação bem ensaiada,
 \begin_inset CommandInset index_print
 LatexCommand printindex
 type "idx"
+name "Índice"
+literal "true"
 
 \end_inset
 

@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass abntex2
 \options normaltoc, sumarioincompleto
 \use_default_options false
@@ -10,16 +12,18 @@
 \language_package default
 \inputencoding iso8859-1
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -58,6 +62,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Índice
 \shortcut idx
 \color #008000
@@ -72,7 +77,10 @@
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle headings
@@ -122,7 +130,7 @@ thispagestyle{empty}
 \align center
 
 \size large
-TÍTULO DO(A) TCC/DISSERTAÇÃO/TESE
+TÍTULO DO TCC / TÍTULO DA DISSERTAÇÃO / TÍTULO DA TESE
 \begin_inset Note Note
 status open
 
@@ -138,7 +146,7 @@ O título deve ser o mais claro possível, não deixando dúvidas sobre o assunt
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 5cm
+\begin_inset VSpace 4cm
 \end_inset
 
 
@@ -156,7 +164,7 @@ NOME COMPLETO DO AUTOR(A)
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 6cm
+\begin_inset VSpace 4cm
 \end_inset
 
 
@@ -188,11 +196,15 @@ MACAÉ - RJ
 \begin_inset Newline newline
 \end_inset
 
-MAIO - 2017
+Janeiro - 2018
 \end_layout
 
 \begin_layout Standard
 \begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -231,6 +243,10 @@ thispagestyle{empty}
 
 \begin_layout Standard
 \begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -273,8 +289,7 @@ thispagestyle{empty}
 \align center
 
 \size large
-TÍTULO DA DISSERTAÇÃO / TESE; TÍTULO DA DISSERTAÇÃO / TESE; TÍTULO DA DISSERTAÇÃ
-O / TESE; TÍTULO DA DISSERTAÇÃO / TESE; TÍTULO DA DISSERTAÇÃO / TESE
+TÍTULO DO TCC / TÍTULO DA DISSERTAÇÃO / TÍTULO DA TESE
 \end_layout
 
 \begin_layout Standard
@@ -311,19 +326,33 @@ width "50text%"
 special "none"
 height "1in"
 height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
 \align block
-Monografia/Dissertação/Tese apresentada ao Centro de Ciências e Tecnologia
- da Universidade Estadual do Norte Fluminense, como parte das exigências
- para obtenção do título de Mestre/Doutor em Engenharia de Reservatório
- e de Exploração.
+Trabalho de Conclusão de Curso/Dissertação/Tese apresentada
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-manter esta linha apenas nas dissertações/teses
+apresentado
+\end_layout
+
+\end_inset
+
+ ao Centro de Ciências e Tecnologia da Universidade Estadual do Norte Fluminense
+, como parte das exigências para obtenção do título de 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align block
+Mestre/Doutor em Engenharia de Reservatório e de Exploração.
 \end_layout
 
 \end_inset
@@ -333,12 +362,12 @@ manter esta linha apenas nas dissertações/teses
 
 \begin_layout Plain Layout
 \align block
-título de Engenheiro de Exploração e Produção de Petróleo.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-manter esta linha apenas nas monografias
+\align block
+Engenheiro de Exploração e Produção de Petróleo.
 \end_layout
 
 \end_inset
@@ -379,7 +408,7 @@ MACAÉ - RJ
 \begin_inset Newline newline
 \end_inset
 
-MAIO - 2017
+Janeiro - 2018
 \begin_inset Newline newline
 \end_inset
 
@@ -430,7 +459,7 @@ noindent
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -577,19 +606,33 @@ width "50text%"
 special "none"
 height "1in"
 height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
 \align block
-Monografia/Dissertação/Tese apresentada ao Centro de Ciências e Tecnologia
- da Universidade Estadual do Norte Fluminense, como parte das exigências
- para obtenção do título de Mestre/Doutor em Engenharia de Reservatório
- e de Exploração.
+Trabalho de Conclusão de Curso/Dissertação/Tese apresentada
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-manter esta linha apenas nas dissertações/teses
+apresentado
+\end_layout
+
+\end_inset
+
+ ao Centro de Ciência e Tecnologia da Universidade Estadual do Norte Fluminense,
+ como parte das exigências para obtenção do título de 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align block
+Mestre/Doutor em Engenharia de Reservatório e de Exploração.
 \end_layout
 
 \end_inset
@@ -599,12 +642,12 @@ manter esta linha apenas nas dissertações/teses
 
 \begin_layout Plain Layout
 \align block
-título de Engenheiro de Exploração e Produção de Petróleo.
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-manter esta linha apenas nas monografias
+\align block
+Engenheiro de Exploração e Produção de Petróleo.
 \end_layout
 
 \end_inset
@@ -834,7 +877,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Biografia} 
 \end_layout
@@ -879,7 +922,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Prefácio} 
 \end_layout
@@ -913,6 +956,10 @@ Público a que se dirige, trabalhos já realizados.
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -931,7 +978,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Dedicatória}
 \end_layout
@@ -987,7 +1034,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Agradecimentos}
 \end_layout
@@ -1031,6 +1078,10 @@ Aos professores e funcionários do LENEP/CCT/UENF....
 
 \begin_layout Standard
 Ao CENPES/PETROBRAS pelo fornecimento de material....
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1125,7 +1176,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{Epígrafe}
 \end_layout

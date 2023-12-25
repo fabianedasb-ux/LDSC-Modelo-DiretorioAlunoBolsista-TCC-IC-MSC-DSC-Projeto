@@ -1,0 +1,15 @@
+
+
+Manual instalation
+------------------
+
+You can manually install the abntex2 class and the abntex2cite package in any LaTeX system (TeXLive, MiKTeX,
+among others) running over a Windows, Linux, Mac, BSD (among others) if you have:
+
+  abntex2.cls	            The abntex2 class file.
+  abntex2cite.sty	        The abntex2cite citation package file.
+  abntex2abrev.sty	        Extension of abntex2cite package. It contains abbreviations helpers macros.
+  abntex2-alf.bst	        Numeric citation style file.
+  abntex2-num.bst			Alphanumeric (author-date) citation style file.
+  abntex2-options.bib	    Default citation options configurations.
+

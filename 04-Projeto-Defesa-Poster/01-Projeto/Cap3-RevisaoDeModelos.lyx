@@ -1,8 +1,10 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
-\textclass abnt
+\save_transient_properties true
+\origin unavailable
+\textclass ../../../../../../../Dropbox/05-Gestao/Modelos/1-ModelosDiretorios/ModeloDiretorio-Aluno-Bolsista-TCC-IC-MSC-DSC-Projeto-GIT/04-Projeto-Defesa-Poster/01-Projeto/abnt
 \begin_preamble
 \usepackage {graphicx}
 \usepackage {longtable}
@@ -10,22 +12,24 @@
 \renewenvironment{center}{\par\centering}{\par}
 \end_preamble
 \use_default_options false
-\master Monografia-Dissertacao-Tese-master.lyx
+\master ../../../../../../../Dropbox/05-Gestao/Modelos/1-ModelosDiretorios/ModeloDiretorio-Aluno-Bolsista-TCC-IC-MSC-DSC-Projeto-GIT/04-Projeto-Defesa-Poster/01-Projeto/Monografia-Dissertacao-Tese-master.lyx
 \maintain_unincluded_children false
 \language brazilian
 \language_package default
 \inputencoding iso8859-1
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -56,6 +60,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Índice
 \shortcut idx
 \color #008000
@@ -70,7 +75,10 @@
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
@@ -274,8 +282,8 @@ onde
 u
 \series default
  é o vetor deslocamento.
- Observe que a função autocorrelação fornece a probabi\SpecialChar \-
-li\SpecialChar \-
+ Observe que a função autocorrelação fornece a probabi\SpecialChar softhyphen
+li\SpecialChar softhyphen
 dade de intersecção
  na direção 
 \series bold
@@ -345,7 +353,7 @@ status open
 \paragraph_spacing single
 \align center
 \begin_inset Graphics
-	filename ../imagens/Correlacao-espacial_x_frequencial.jpg
+	filename ../../imagens/Correlacao-espacial_x_frequencial.jpg
 	scale 75
 	rotateOrigin center
 
@@ -427,6 +435,7 @@ Este é outro exemplo de citação
 \begin_inset CommandInset citation
 LatexCommand cite
 key "adb-tese"
+literal "true"
 
 \end_inset
 

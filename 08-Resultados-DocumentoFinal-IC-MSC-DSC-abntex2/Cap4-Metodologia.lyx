@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass abntex2
 \use_default_options true
 \maintain_unincluded_children false
@@ -9,16 +11,18 @@
 \language_package default
 \inputencoding utf8
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -48,6 +52,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -56,7 +61,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle myheadings
@@ -100,7 +108,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 lhead{
 \backslash
@@ -140,6 +148,10 @@ Descreva de forma objetiva a metodologia do trabalho a ser desenvolvido,
 
 \begin_layout Itemize
 O objetivo deste capítulo é:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -162,6 +174,10 @@ Anunciar as ideias mestras adotadas e o plano de trabalho seguido.
 
 \begin_layout Itemize
 Instrumentos:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -226,6 +242,10 @@ name "sec:Motivacao-Para-o-Tema"
 
 \begin_layout Itemize
 Envolvimento anterior do graduando/mestrando/doutorando com o tema:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -247,6 +267,10 @@ A ideia aqui é mostrar que você tem domínio dos conhecimentos necessários
 \end_deeper
 \begin_layout Itemize
 Fonte de interesse atual pelo tema:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -262,6 +286,10 @@ A ideia é identificar se, de fato, você tem interesse pelo tema.
 \end_deeper
 \begin_layout Itemize
 Facilidades pessoais do aluno para a abordagem do tema:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -296,6 +324,10 @@ A ideia aqui é ter a certeza de que já conhece/domina e tem facilidade com
 \end_deeper
 \begin_layout Itemize
 Dificuldades atuais do aluno que podem ser minoradas a partir do trabalho:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -323,6 +355,10 @@ Ampliação do conhecimento de alguns conceitos envolvidos no processo.
 \end_deeper
 \begin_layout Itemize
 Usos futuros do conhecimento na área em estudo por parte do aluno:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -394,6 +430,10 @@ Quanto ao fim, área, sub-área, tema específico e disciplinas relacionadas
 
 \begin_layout Itemize
 Quanto ao fim:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -408,12 +448,20 @@ Aplicada
 \end_deeper
 \begin_layout Itemize
 Área e sub-área de estudo:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 indique a área e sub-área da pesquisa, tome como base a definição das áreas
  de pesquisa do CNPq.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -426,6 +474,10 @@ Dica: entre no seu curriculun lattes e cadastre seu trabalho, lá terá de
 \end_deeper
 \begin_layout Itemize
 Subordinação do tema a áreas do conhecimento científico:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -436,6 +488,10 @@ indique as áreas do conhecimento científico as quais o trabalho esta relaciona
 \end_deeper
 \begin_layout Itemize
 Disciplinas relacionadas:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -447,6 +503,10 @@ indique disciplinas relacionadas, note que é diferente das disciplinas feitas;
 \end_deeper
 \begin_layout Itemize
 Áreas não incluidas:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -470,7 +530,7 @@ Tipo de modelagem
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Quanto-ao-tipo-de-modelagem"
+name "subsec:Quanto-ao-tipo-de-modelagem"
 
 \end_inset
 
@@ -539,7 +599,7 @@ Note que um trabalho pode ser misto.
 Quanto ao tipo de análise
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Quanto-ao-tipo-de-analise"
+name "subsec:Quanto-ao-tipo-de-analise"
 
 \end_inset
 
@@ -566,6 +626,7 @@ Indutiva
 LatexCommand nomenclature
 symbol "Indução"
 description "Indução"
+literal "true"
 
 \end_inset
 
@@ -593,6 +654,7 @@ Dedutiva
 LatexCommand nomenclature
 symbol "Dedução"
 description "Dedução"
+literal "true"
 
 \end_inset
 
@@ -611,6 +673,7 @@ Analítica - analise e síntese
 LatexCommand nomenclature
 symbol "Análise e síntese"
 description "Análise e síntese"
+literal "true"
 
 \end_inset
 
@@ -630,7 +693,7 @@ Sintetizar é reagrupar os grupos de dados analisados em separado.
 Limitações do trabalho
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Limitacao-do-trabalho"
+name "subsec:Limitacao-do-trabalho"
 
 \end_inset
 
@@ -790,7 +853,7 @@ Novamente é importante deixar claro o que você fez e o que o grupo fez.
 Pressupostos
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Pressupostos"
+name "subsec:Pressupostos"
 
 \end_inset
 
@@ -937,7 +1000,7 @@ Materiais
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Materiais"
+name "subsec:Materiais"
 
 \end_inset
 
@@ -988,7 +1051,7 @@ Equipamentos
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Equipamentos"
+name "subsec:Equipamentos"
 
 \end_inset
 
@@ -1034,7 +1097,7 @@ Softwares
 
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Softwares"
+name "subsec:Softwares"
 
 \end_inset
 
@@ -1044,6 +1107,10 @@ name "sub:Softwares"
 \begin_layout Itemize
 Listar softwares utilizados, sites, versões.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1174,7 +1241,7 @@ Ensaios
  laboratoriais
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Ensaios-laboratoriais"
+name "subsec:Ensaios-laboratoriais"
 
 \end_inset
 
@@ -1183,6 +1250,10 @@ name "sub:Ensaios-laboratoriais"
 
 \begin_layout Itemize
 Sobre inovação em ensaios laboratoriais
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1217,6 +1288,10 @@ Note que se você esta usando equipamentos de mercado, comuns nos laboratórios
 A coleta de uma amostra diferente, numa região diferente, também não se
  caracteriza como algo inovador.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1245,6 +1320,10 @@ Na maioria dos casos a ordem é fundamental!
 
 \begin_layout Itemize
 Definir os procedimentos experimentais (principalmente as inovações).
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1268,6 +1347,10 @@ Deve-se tomar todos os cuidados possíveis na sua instalação dos equipamentos,
 
 \begin_layout Itemize
 Informar a necessidade de pré-ensaios e calibração dos equipamentos.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1285,6 +1368,10 @@ Informar como os resultados dos ensaios serão classificados, analisados
  O normal é gerar as tabelas e gráficos usando o mesmo formato dos outros
  autores.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1314,7 +1401,7 @@ Simulações
  computacionais
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Simulações-computacionais"
+name "subsec:Simulações-computacionais"
 
 \end_inset
 
@@ -1323,6 +1410,10 @@ name "sub:Simulações-computacionais"
 
 \begin_layout Itemize
 Sobre inovação em modelagem numérica-computacional
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1341,6 +1432,10 @@ o, implementação, testes e documentação.
 \end_deeper
 \begin_layout Itemize
 Sobre validação na modelagem numérica-computacional
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1367,6 +1462,10 @@ o modelo numérico adotado é adequado para este tipo de problema?
 
 \begin_layout Itemize
 a implementação computacional (programa) esta correta? 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper

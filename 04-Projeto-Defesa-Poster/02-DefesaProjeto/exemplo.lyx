@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass beamer
 \begin_preamble
 \usetheme{Warsaw}
@@ -19,16 +21,18 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman times
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -58,6 +62,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -66,7 +71,10 @@
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -80,6 +88,11 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\newmacroname}{}
+\end_inset
+
+
 \begin_inset Note Note
 status collapsed
 
@@ -486,6 +499,10 @@ Outline
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -518,6 +535,10 @@ Definition
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -535,7 +556,10 @@ Over the years, hundreds of programming languages have been created with
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -547,6 +571,10 @@ status open
 Programming languages generations
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -566,7 +594,10 @@ n are added above the machine-code program.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -581,6 +612,10 @@ First Generation
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -592,7 +627,10 @@ Use a binary code that consists of strings of only zeroes (0) and ones.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -604,6 +642,10 @@ status open
 First Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -619,8 +661,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/machine-language-example.gif
-	scale 50
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -628,7 +670,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Example of binary code.
+Example of binary code
 \end_layout
 
 \end_inset
@@ -653,7 +695,10 @@ name "binary_code"
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -665,6 +710,10 @@ status open
 Second Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -682,7 +731,10 @@ Assembly language programs need to be converted into machine language by
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -694,6 +746,10 @@ status open
 Second Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -709,8 +765,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/assembly.png
-	scale 50
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -718,15 +774,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Hello World in Assembly.
+Hello World in Assembly
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -736,7 +788,10 @@ Hello World in Assembly.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -748,6 +803,10 @@ status open
 Third Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -778,7 +837,10 @@ Fortran, Algol, Pascal and C are examples of this.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -790,6 +852,10 @@ status open
 Third Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -809,8 +875,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/helloworld_fortran.jpg
-	scale 50
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -818,15 +884,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Hello World in Fortran.
+Hello World in Fortran
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -836,7 +898,10 @@ Hello World in Fortran.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -848,6 +913,10 @@ status open
 Fourth Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -877,7 +946,10 @@ ng.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -889,6 +961,10 @@ status open
 Fourth Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -915,7 +991,10 @@ Given the right problem, the use of an appropriate 4GL can be spectacularly
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -927,6 +1006,10 @@ status open
 Fourth Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -946,8 +1029,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/python_hello_world.png
-	scale 60
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -955,15 +1038,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Hello World in Python.
+Hello World in Python
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -973,7 +1052,10 @@ Hello World in Python.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -988,6 +1070,10 @@ Fourth Generation
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -997,7 +1083,10 @@ As you add more layers above the machine and get closer to the programmer,
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1009,6 +1098,10 @@ status open
 Fifth Generation
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1062,6 +1155,10 @@ Basic Approach
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1074,7 +1171,10 @@ Considering those different types of languages, and while trying to get
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1089,6 +1189,10 @@ Basic Approach
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1100,7 +1204,10 @@ It has proven to be valuable because as we were not so familiar with the
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1112,6 +1219,10 @@ status open
 Basic Approach
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1131,9 +1242,10 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Figuras/caminhos_1.png
-	scale 20
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1141,15 +1253,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Software goal.
+Software goal
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1163,7 +1271,10 @@ Software goal.
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1175,6 +1286,10 @@ status open
 Basic Approach
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1194,9 +1309,10 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Figuras/caminhos.png
-	scale 20
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1204,7 +1320,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dead ends in the software development process.
+Dead ends in the software development process
 \end_layout
 
 \end_inset
@@ -1230,7 +1346,10 @@ Dead ends in the software development process.
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1242,6 +1361,10 @@ status open
 Basic Approach
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1258,9 +1381,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename Figuras/caminhos_3.png
-	scale 20
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1286,7 +1410,10 @@ Areas improved by prototyping
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1298,6 +1425,10 @@ status open
 Basic Approach
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1322,8 +1453,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/dev_time.jpg
-	scale 28
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1339,17 +1470,16 @@ Development time x Execution time
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1364,6 +1494,10 @@ Python/MatLab and Fortran/C++
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1375,7 +1509,10 @@ With all being said, we have been using Python and MatLab to prototype because
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1391,6 +1528,10 @@ status open
 Problem
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1419,7 +1560,10 @@ There is no heat exchange between the environment and pipe;
 Heat flow.
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1431,6 +1575,10 @@ status open
 Fortran
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1466,7 +1614,10 @@ UMFPack (set of routines for solving sparse linear systems).
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1488,6 +1639,9 @@ Lines of code:
 \end_layout
 
 \begin_layout Frame
+\begin_inset Separator latexpar
+\end_inset
+
 
 \end_layout
 
@@ -1505,7 +1659,10 @@ A Total of 40% more code.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1527,7 +1684,10 @@ The same example was run in Python and in Fortran.
  The Fortran code executed on a average of 20x faster.
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1546,6 +1706,10 @@ Testing with a Purpose
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1561,7 +1725,10 @@ Testing of individual software components or modules.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1573,6 +1740,10 @@ status open
 Why to test?
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1600,7 +1771,10 @@ Finding bugs becomes much easier.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1612,6 +1786,10 @@ status open
 Why to test?
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1636,7 +1814,10 @@ Automated software testing can help the developer to identify problematic
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1652,6 +1833,10 @@ status open
 Types of tests
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1694,7 +1879,10 @@ For example, a system test might involve testing a logon interface, then
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1709,6 +1897,10 @@ Unit testing
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1718,7 +1910,10 @@ The type of code we are mainly using in this project.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1730,6 +1925,10 @@ status open
 Unit testing
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1761,7 +1960,10 @@ The programmer should try to make its tests more comprehensive as possible.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1777,6 +1979,10 @@ status open
 Examples
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1797,8 +2003,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/test_2.png
-	scale 40
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1814,17 +2020,16 @@ A Python Class
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1839,6 +2044,10 @@ Examples
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1850,14 +2059,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/test_1.png
-	scale 40
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1873,17 +2078,16 @@ A Python unit test
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1895,6 +2099,10 @@ status open
 Fortran example
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1914,8 +2122,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/test_3.png
-	scale 40
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1941,7 +2149,10 @@ Fortran 2003 methods
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -1953,6 +2164,10 @@ status open
 Fortran example
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -1972,8 +2187,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/test_4.png
-	scale 40
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -1999,7 +2214,10 @@ Fortran test case
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -2022,6 +2240,10 @@ Thermodynamics
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2034,8 +2256,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/ModeloDesenvolvimento-PacoteTermodinamica-Atual-Ingles.eps
-	scale 80
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -2057,7 +2279,10 @@ Thermodynamic's module development overwiew
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -2076,6 +2301,10 @@ Well - Implementation with Prototyping and Code Conversion
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2088,8 +2317,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/ModeloDesenvolvimento-PacotePoco-Atual-Ingles.eps
-	scale 80
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -2111,7 +2340,10 @@ Well's module development overwiew
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -2123,6 +2355,10 @@ status open
 Well - Implementation with Prototyping and Code Conversion
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -2151,7 +2387,10 @@ executable code is slower.
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -2170,6 +2409,10 @@ Termodynamics and Well
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2184,8 +2427,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename Figuras/ModeloDesenvolvimento-PacotePoco-Futuro-Ingles.eps
-	scale 50
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -2207,7 +2450,10 @@ Final Packages Integration
 \end_layout
 
 \end_deeper
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -2226,6 +2472,10 @@ Future activities
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2240,6 +2490,10 @@ Find the best way to integrate all this different languages, and make they
 
 \begin_layout Itemize
 Finish implementation:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2257,7 +2511,10 @@ Test integration between the generated libraries and PVT-Phase-GUI.
 
 \end_layout
 
-\begin_layout Separator
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -2272,10 +2529,17 @@ Acknowledgements
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout ColumnsCenterAligned
+\begin_inset Separator latexpar
+\end_inset
+
 
 \end_layout
 
@@ -2287,9 +2551,8 @@ Acknowledgements
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Figuras/logo_petrobras.jpg
-	lyxscale 40
-	scale 30
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -2306,8 +2569,8 @@ Acknowledgements
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Figuras/log_rede-siger.png
-	scale 90
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -2321,9 +2584,8 @@ Acknowledgements
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Figuras/logo_prhanp.jpg
-	lyxscale 30
-	scale 12
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -2340,9 +2602,8 @@ Acknowledgements
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Figuras/logo_capes.png
-	lyxscale 30
-	scale 20
+	filename /home/andreduartebueno/Dropbox/Imagens/AnaliseImagens/0-SequenciaProcessos/imagem_digital.tif
+	width 50text%
 
 \end_inset
 
@@ -2350,18 +2611,6 @@ Acknowledgements
 \end_layout
 
 \end_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename Figuras/logo_UENF.png
-	lyxscale 30
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
 \end_deeper
 \end_body
 \end_document

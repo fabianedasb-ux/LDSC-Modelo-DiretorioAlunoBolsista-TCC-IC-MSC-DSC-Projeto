@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass abnt
 \begin_preamble
 \usepackage {graphicx}
@@ -28,16 +30,18 @@
 \language_package default
 \inputencoding iso8859-1
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -80,6 +84,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Índice
 \shortcut idx
 \color #008000
@@ -94,7 +99,10 @@
 \tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
@@ -108,7 +116,10 @@
 \begin_body
 
 \begin_layout Chapter
-Usando TeX/LaTeX/LyX
+Usando \SpecialChar TeX
+/\SpecialChar LaTeX
+/\SpecialChar LyX
+
 \end_layout
 
 \begin_layout Standard
@@ -164,7 +175,9 @@ yum -y install gnuplot
 \end_layout
 
 \begin_layout Section
-Configuração TeX/LaTeX
+Configuração \SpecialChar TeX
+/\SpecialChar LaTeX
+
 \end_layout
 
 \begin_layout Subsection
@@ -185,8 +198,15 @@ texconfig
 \color inherit
  
 \color blue
-o ítem `HYPHEN' e a seguir 'LaTeX'.
+o ítem `HYPHEN' e a seguir '\SpecialChar LaTeX
+'.
  Procure pela linha:
+\color inherit
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -199,6 +219,12 @@ o ítem `HYPHEN' e a seguir 'LaTeX'.
 
 \color blue
 e retire o comentário %!, ficando
+\color inherit
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -236,7 +262,8 @@ O programa
 \series bold
 texhash
 \series default
- é usado para atualizar a base de dados do LaTeX.
+ é usado para atualizar a base de dados do \SpecialChar LaTeX
+.
 \end_layout
 
 \end_inset
@@ -319,6 +346,10 @@ Lembre-se que se a figura, foto, esquemas, etc, for colorido o mesmo deve
 \begin_layout Itemize
 Veja o que diz o link http://www.cedsmi.ufpr.br/celsoishida/tutorial/artigo/figura.p
 hp
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -371,8 +402,9 @@ Veja a seguir exemplo de inclusão de Figura.
 \end_layout
 
 \begin_layout Itemize
-No LyX 2.00, vá em "Inserir-Flutuante-Figura" (também pode clicar no ícone
- "Inserir Flutuante Figura").
+No \SpecialChar LyX
+ 2.00, vá em "Inserir-Flutuante-Figura" (também pode clicar no ícone "Inserir
+ Flutuante Figura").
 \end_layout
 
 \begin_layout Itemize
@@ -383,22 +415,32 @@ Dentro do box "float:figure" ou "flutuante: Figura" você deve incluir o
 
 \begin_layout Itemize
 a seguir inclua um "label-rótulo", que será utilizado para referência cruzada.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-No LyX 2.0 vá em "Inserir etiqueta" ou pressione o botão "Inserir Legenda".
+No \SpecialChar LyX
+ 2.0 vá em "Inserir etiqueta" ou pressione o botão "Inserir Legenda".
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
 acima do titulo coloque a figura.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-No LyX 2.0 vá em "Inserir Gráficos" ou click no ícone "Inserir Gráficos".
+No \SpecialChar LyX
+ 2.0 vá em "Inserir Gráficos" ou click no ícone "Inserir Gráficos".
 \end_layout
 
 \begin_layout Itemize
@@ -418,8 +460,11 @@ Dica: no canto superior esquerdo do box que contém a figura, existe um texto
  Ao clicar com o botão esquerdo do mouse neste box, o mesmo é iconizado.
  Repeta o clic para retornar ao estado anterior.
  Ao clicar com o botão direito, abre-se um diálogo em que é possível selecionar
- a opção [ X ] Aqui definitivamente, se quizer obrigar o LyX/TeX-LaTeX a
- colocar a figura aqui.
+ a opção [ X ] Aqui definitivamente, se quizer obrigar o \SpecialChar LyX
+/\SpecialChar TeX
+-\SpecialChar LaTeX
+ a colocar a
+ figura aqui.
 \end_layout
 
 \begin_layout Standard
@@ -448,7 +493,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/0-sequencia-processos-conhecimentos-base.png
+	filename ../../imagens/0-sequencia-processos-conhecimentos-base.png
 	scale 35
 	rotateOrigin center
 
@@ -497,7 +542,6 @@ reference "Figure: Imagem colorida após pré-processamento."
  mostra uma imagem do Berea 200 colorida em (a) e depois da etapa de pré-process
 amento com o filtro passa baixa em (b).
  Observe a redução do contraste e um certo embaçamento da imagem.
- 
 \end_layout
 
 \begin_layout Standard
@@ -527,9 +571,10 @@ subtítulo para figura a
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename ../imagens/I26.jpg
-	scale 35
+	filename ../../imagens/0-sequencia-processos-conhecimentos-base.png
+	width 40text%
 	rotateOrigin center
 
 \end_inset
@@ -560,8 +605,8 @@ subtítulo para figura b
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../imagens/I26.jpg
-	scale 35
+	filename ../../imagens/0-sequencia-processos-conhecimentos-base.png
+	width 40text%
 	rotateOrigin center
 
 \end_inset
@@ -709,6 +754,7 @@ x
 LatexCommand nomenclature
 symbol "x"
 description "Um ponto de coordenada (x,y)"
+literal "true"
 
 \end_inset
 
@@ -742,6 +788,7 @@ x
 LatexCommand nomenclature
 symbol "FF(x)"
 description "Função de fase "
+literal "true"
 
 \end_inset
 
@@ -823,6 +870,10 @@ Quando colocamos o mouse dentro da tabela, aparece uma barra de tarefas
  na parte de baixo do Lyx, que nos permite manipular alguns aspectos da
  tabela.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -865,7 +916,7 @@ name "tab:Exemplo-de-tabela"
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1192,7 +1243,7 @@ name "tab:Exemplo-de-tabela-2"
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="20" columns="11">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3246,8 +3297,10 @@ Apresenta-se na listagem
 status open
 
 \begin_layout Plain Layout
-Nota: Comandos de TeX/LaTeX aparecem dentro de um box com linhas vermelhas,
- como o comando a seguir que inclui uma referência.
+Nota: Comandos de \SpecialChar TeX
+/\SpecialChar LaTeX
+ aparecem dentro de um box com linhas vermelhas, como
+ o comando a seguir que inclui uma referência.
 \end_layout
 
 \end_inset
@@ -3411,7 +3464,7 @@ extendedchars=true,breaklines=true,basicstyle=
 \backslash
 footnotesize
 \backslash
-tt] {../listagens/CAplicacao.h}
+tt] {../../listagens/CAplicacao.h}
 \end_layout
 
 \end_inset
@@ -3456,7 +3509,7 @@ lstinputlisting[ caption={Arquivo de implementação da classe.}, label={CAplica
 \backslash
 footnotesize
 \backslash
-tt] {../listagens/CAplicacao.cpp}
+tt] {../../listagens/CAplicacao.cpp}
 \end_layout
 
 \end_inset
@@ -3504,7 +3557,7 @@ texttt{main()}.}, label={List-5-3-programa.cpp},extendedchars=true,breaklines=tr
 \backslash
 footnotesize
 \backslash
-tt] {../listagens/Programa.cpp}
+tt] {../../listagens/Programa.cpp}
 \end_layout
 
 \end_inset
@@ -3528,7 +3581,7 @@ lstinputlisting[caption=,extendedchars=true,breaklines=true,basicstyle=
 \backslash
 footnotesize
 \backslash
-tt] {../listagens/Programa.out}   
+tt] {../../listagens/Programa.out}   
 \backslash
 lstset{backgroundcolor=} 
 \end_layout
@@ -3575,6 +3628,10 @@ s bibliográficas.
 ficas a serem incluídas em sua tese (tudo que você leu, e que pode ser incluído
  na citação da tese e de outros artigos.
  É sua base de dados de citações).
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3611,11 +3668,13 @@ Insert Cross-Reference
 \end_layout
 
 \begin_layout Enumerate
-Aqui um exemplo, vou citar material sobre LyX e Latex.
+Aqui um exemplo, vou citar material sobre \SpecialChar LyX
+ e Latex.
  Veja maiores informações sobre latex em 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SL-latex-companion,SL-latex-donald,SL-latex-demo,SL-latex-Guide2e,SL-latex-lamport,SL-latex-lyxEF,SL-latex-lyxtut,SL-latex-lyxUG"
+literal "true"
 
 \end_inset
 
@@ -3624,11 +3683,19 @@ key "SL-latex-companion,SL-latex-donald,SL-latex-demo,SL-latex-Guide2e,SL-latex-
 
 \begin_layout Enumerate
 Dica: em alguns sites é possivel encontrar os dados .bib da citação; 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 Exemplo:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3637,11 +3704,13 @@ Vá no link
 \begin_inset CommandInset href
 LatexCommand href
 target "http://books.google.com.br/books/about/LATEX.html?id=khVUAAAAMAAJ&redir_esc=y"
+literal "false"
 
 \end_inset
 
- e pressione no final da página o botão BibTeX, ele vai fazer o download
- da referencia completa no formato bib para você.
+ e pressione no final da página o botão Bib\SpecialChar TeX
+, ele vai fazer o download da
+ referencia completa no formato bib para você.
  Ou seja, é tão bacana que em alguns casos nem precisa digitar a citação!
 \end_layout
 
@@ -3678,6 +3747,7 @@ Segundo
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SL-latex-companion"
+literal "true"
 
 \end_inset
 
@@ -3685,6 +3755,7 @@ key "SL-latex-companion"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SL-latex-lyxEF,SL-latex-lyxtut"
+literal "true"
 
 \end_inset
 
@@ -3696,6 +3767,7 @@ Segundo
 \begin_inset CommandInset citation
 LatexCommand cite
 key "SL-latex-companion,SL-latex-donald,SL-latex-demo,SL-latex-Guide2e,SL-latex-lamport,SL-latex-lyxEF,SL-latex-lyxtut,SL-latex-lyxUG"
+literal "true"
 
 \end_inset
 
@@ -3828,6 +3900,7 @@ asldkja
 \begin_inset CommandInset citation
 LatexCommand nocite
 key "SL-latex-companion"
+literal "true"
 
 \end_inset
 
@@ -3839,6 +3912,7 @@ asldkjasl
 \begin_inset CommandInset citation
 LatexCommand nocite
 key "SL-latex-companion,SL-latex-donald,SL-latex-demo,SL-latex-Guide2e,SL-latex-lamport,SL-latex-lyxEF,SL-latex-lyxtut,SL-latex-lyxUG"
+literal "true"
 
 \end_inset
 
@@ -3856,8 +3930,9 @@ Citações usando natbib
 \begin_layout Plain Layout
 Requer comando: 
 \backslash
-usepackage[options]{natbib}, no LyX, Documento->Configurações->->Bibliografia->E
-stiloCitação->Natbib.
+usepackage[options]{natbib}, no \SpecialChar LyX
+, Documento->Configurações->->Bibliografia->Esti
+loCitação->Natbib.
  
 \end_layout
 
@@ -4096,14 +4171,15 @@ Diversos sites de pesquisa e mesmo sites de pesquisa como o google, costumam
 \begin_layout Standard
 Veja a seguir Figura do site books.google.com.br.
  O usuário localizou o livro na base de dados do google, rolou a página
- para baixo e encontrou o link para as referencias nos formatos: BIBTeX,
- EndNote e RefMan.
+ para baixo e encontrou o link para as referencias nos formatos: BIB\SpecialChar TeX
+, EndNote
+ e RefMan.
  Baixe a versão BIBTex e copie seu conteúdo para o arquivo bibliografia.bib.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename ../imagens/imagensSites/books.google.com.br.png
+	filename ../../imagens/imagensSites/books.google.com.br.png
 
 \end_inset
 
@@ -4112,7 +4188,7 @@ Veja a seguir Figura do site books.google.com.br.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename ../imagens/imagensSites/books.google.com.br-referenciaCompleta.png
+	filename ../../imagens/imagensSites/books.google.com.br-referenciaCompleta.png
 
 \end_inset
 
@@ -4124,13 +4200,15 @@ Informações Adicionais
 \end_layout
 
 \begin_layout Itemize
-Manuais do LyX (precisa ler!)
+Manuais do \SpecialChar LyX
+ (precisa ler!)
 \end_layout
 
 \begin_layout Itemize
 \begin_inset CommandInset href
 LatexCommand href
 target "http://chem-e.org/comando-cite-e-citeonline-no-abntex/"
+literal "false"
 
 \end_inset
 
@@ -4141,6 +4219,7 @@ target "http://chem-e.org/comando-cite-e-citeonline-no-abntex/"
 \begin_inset CommandInset href
 LatexCommand href
 target "http://win.ua.ac.be/~nschloe/content/bibtex-how-cite-website"
+literal "false"
 
 \end_inset
 
@@ -4151,6 +4230,7 @@ target "http://win.ua.ac.be/~nschloe/content/bibtex-how-cite-website"
 \begin_inset CommandInset href
 LatexCommand href
 target "http://chem-e.org/comando-apud-e-apudonline-no-abntex/"
+literal "false"
 
 \end_inset
 
@@ -4161,6 +4241,7 @@ target "http://chem-e.org/comando-apud-e-apudonline-no-abntex/"
 \begin_inset CommandInset href
 LatexCommand href
 target "http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management"
+literal "false"
 
 \end_inset
 
@@ -4169,10 +4250,20 @@ target "http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management"
 
 \begin_layout Standard
 \noindent
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\noindent
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bibliografia"
 options "plain"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
