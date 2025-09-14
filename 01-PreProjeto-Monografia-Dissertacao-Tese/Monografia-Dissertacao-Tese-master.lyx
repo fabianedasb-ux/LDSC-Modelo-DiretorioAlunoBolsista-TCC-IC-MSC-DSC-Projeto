@@ -483,6 +483,17 @@ o passo a passo de como vai fazer pesquisa.
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Cap5-Desenvolvimento.lyx"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 \align block
 \begin_inset ERT

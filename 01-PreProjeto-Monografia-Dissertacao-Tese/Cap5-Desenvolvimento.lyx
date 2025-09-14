@@ -1,10 +1,10 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass ../../../../../../Dropbox/05-Gestao/Modelos/1-ModelosDiretorios/ModeloDiretorio-Aluno-Bolsista-TCC-IC-MSC-DSC-Projeto-GIT/04-Projeto-Mestrado-Doutorado-BancaEditalSelecao/abnt
+\textclass abnt
 \begin_preamble
 \usepackage {graphicx}
 \usepackage {longtable}
@@ -14,11 +14,11 @@
 \end_preamble
 \use_default_options false
 \master ../../../../../../Dropbox/05-Gestao/Modelos/1-ModelosDiretorios/ModeloDiretorio-Aluno-Bolsista-TCC-IC-MSC-DSC-Projeto-GIT/04-Projeto-Mestrado-Doutorado-BancaEditalSelecao/Monografia-Dissertacao-Tese-master.lyx
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language brazilian
 \language_package default
 \inputencoding iso8859-1
-\fontencoding global
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -26,7 +26,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -40,7 +42,7 @@
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref false
-\papersize a4paper
+\papersize a4
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -61,7 +63,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Índice
 \shortcut idx
 \color #008000
@@ -83,11 +87,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -95,6 +104,8 @@
 \begin_layout Chapter
 Desenvolvimento
 \begin_inset Index idx
+range none
+pageformat default
 status open
 
 \begin_layout Plain Layout
@@ -140,84 +151,578 @@ Neste capítulo .....
 \end_layout
 
 \begin_layout Section
-Seção Específica Sobre Desenvolvimento
+Detalhar as equações de conservação e o modelo black oil
 \end_layout
 
 \begin_layout Standard
-....
+Este documento apresenta a solução do problema tridimensional de produção/injeção de fluidos no reservatório cilíndrico selado com um poço vertical que penetra parcialmente a formação.
+ O efeito das forças gravitacionais é considerado desprezível e o poço é assumido como de condutividade infinita.
+ A vazão,
+ medida em condição padrão,
+ é prescrita e pode ser função do tempo.
+ A formação pode ser compressível e heterogênea na sua porosidade e permeabilidade.
+ Além da compressibilidade,
+ a viscosidade do fluido é também considerada como uma função da pressão.
 \end_layout
 
-\begin_layout Itemize
-Aqui você deve desenvolver o tema de sua monografia/dissertação/tese.
+\begin_layout Standard
+O balanço de massa para o seguinte volume de elemento na figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:volume"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ segue apresentado abaixo:
 \end_layout
 
-\begin_layout Itemize
-Organizar os conceitos com início meio e fim.
- 
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Itemize
-Cada seção/parágrafo deve apontar para o próximo; deve fazer sentido lógico
- e estar relacionado ao escopo do trabalho (definido claramente na metodologia).
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Caption Standard
 
-\begin_layout Itemize
-Ser o mais claro possível, não ter medo de detalhar.
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Imagens/volume-de-controle.jpeg
+	lyxscale 20
+	scale 40
 
-\begin_layout Itemize
-Todos os trabalhos artigos de terceiros devem ser referenciados.
- 
-\end_layout
-
-\begin_layout Itemize
-Todas as figuras, tabelas devem ser referenciadas (referencia cruzada).
- Nenhuma tabela ou figura pode simplesmente aparecer no meio do texto, todas,
- sem exceção, devem ser citadas e comentadas!
-\end_layout
-
-\begin_layout Itemize
-Equações: ao longo do desenvolvimento todas as variáveis utilizadas devem
- ser definidas (e copiadas para nomenclatura com unidades SI).
- 
-\begin_inset Separator latexpar
 \end_inset
 
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-Lembre-se a outra forma de gerar nomenclatura é usar a nomenclatura autmática
- existente no \SpecialChar LyX
- 2; Para usar nomenclatura automática, cada item deve ser
- informado (Inserir->Lista->Nomenclatura).
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:volume"
+
+\end_inset
+
+
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-Deixar claro, ao longo do texto, as inovações desenvolvidas.
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expressão para variação da massa no elemento:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\Delta V\approx r\,\Delta\theta\,\Delta r\,\Delta z,\\
+A_{r}=r\,\Delta\theta\,\Delta z,\qquad A_{\theta}=\Delta r\,\Delta z,\qquad A_{z}=r\,\Delta\theta\,\Delta r.
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expressão para equação da continuidade,
+ conservação da massa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+{\tiny \left\{ \begin{array}{c}
+\text{Variação da massa dentro}\\
+\text{do VC no intervalo }\Delta t
+\end{array}\right\} =\left\{ \begin{array}{c}
+\text{Massa que entra no VC}\\
+\text{no intervalo }\Delta t
+\end{array}\right\} -\left\{ \begin{array}{c}
+\text{Massa que sai do VC}\\
+\text{no intervalo }\Delta t
+\end{array}\right\} .}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A derivação para variação da massa,
+ para o escoamento multifásico em reservatórios de petróleo envolvendo o escoamento simultâneo de até três fases (óleo,
+ água e gás),
+ se apresenta abaixo.
+ O modelo mais empregado para o comportamento destas misturas de hidrocarbonetos é o modelo 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ou black oil.
+\end_layout
+
+\begin_layout Standard
+A variação ou diferença entre a massa de componente i presente no volume de controle,
+ cujo centro se encontra na posição(r,
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+,
+ z) ,
+ entre os instantes t e t+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+t,
+ está dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\Delta V\left[\left(\phi\sum_{j}^{N_{p}}\rho_{j}S_{j}\omega_{ij}\right)^{t+\Delta t}-\left(\phi\sum_{j}^{N_{p}}\rho_{j}S_{j}\omega_{ij}\right)^{t}\right]_{r,\theta,z},
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O componente 
+\begin_inset Formula $i$
+\end_inset
+
+ adentra o volume de controle por advecção,
+ atravessando as faces perpendiculares aos eixos de coordenadas,
+ cujos centros localizam-se,
+ respectivamente,
+ nas posições
+\begin_inset Formula $\ensuremath{r-\frac{\Delta r}{2},\theta,z},\ensuremath{r,\theta-\frac{\Delta\theta}{2},z}$
+\end_inset
+
+ e 
+\begin_inset Formula $\ensuremath{r,\theta,z-\frac{\Delta z}{2}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\left[\left(\sum_{j}^{N_{p}}\rho_{j}\omega_{ij}v_{jr}r\Delta\theta\Delta z\right)_{r+\frac{\Delta r}{2},\,\theta,\,z}+\left(\sum_{j}^{N_{p}}\rho_{j}\omega_{ij}v_{j\theta}\Delta r\Delta z\right)_{r,\,\theta+\frac{\Delta\theta}{2},\,z}+\left(\sum_{j}^{N_{p}}\rho_{j}\omega_{ij}v_{jz}r\Delta\theta\Delta z\right)_{r,\,\theta,\,z+\frac{\Delta z}{2}}\right]\Delta t
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De forma análoga,
+ a massa do componente 
+\begin_inset Formula $i$
+\end_inset
+
+ que sai do volume de controle,
+ através das faces cujos centros se encontram nas posições 
+\begin_inset Formula $\ensuremath{r+\frac{\Delta r}{2},\,\theta,\,z},\ensuremath{r,\,\theta+\frac{\Delta\theta}{2},\,z}e\ensuremath{r,\,\theta,\,z+\frac{\Delta z}{2}}$
+\end_inset
+
+,
+ está dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\left[\left(\sum_{j}^{N_{p}}\rho_{j}\omega_{ij}v_{jr}r\Delta\theta\Delta z\right)_{r-\frac{\Delta r}{2},\,\theta,\,z}+\left(\sum_{j}^{N_{p}}\rho_{j}\omega_{ij}v_{j\theta}\Delta r\Delta z\right)_{r,\,\theta-\frac{\Delta\theta}{2},\,z}+\left(\sum_{j}^{N_{p}}\rho_{j}\omega_{ij}v_{jz}r\Delta\theta\Delta z\right)_{r,\,\theta,\,z-\frac{\Delta z}{2}}\right]\Delta t
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Juntando os termos e fazendo articulações algébricas,
+ se chega em :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\frac{\partial}{\partial t}\left(\phi\sum_{j}^{N_{p}}\omega_{ij}\rho_{j}S_{j}\right)=-\frac{1}{r}\frac{\partial}{\partial r}\left(\sum_{j}^{N_{p}}\omega_{ij}\rho_{j}\mathbf{v}_{j}\right)-\frac{1}{r}\frac{\partial}{\partial\theta}\left(\sum_{j}^{N_{p}}\omega_{ij}\rho_{j}\mathbf{v}_{j}\right)-\frac{\partial}{\partial z}\left(\sum_{j}^{N_{p}}\omega_{ij}\rho_{j}\mathbf{v}_{j}\right)+\sum_{j}^{N_{p}}\omega_{ij}\tilde{q}_{j}.
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Lei de Darcy que representa as expressões para componentes das velocidades é dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\mathbf{v}_{j}=-\mathbf{k}_{j}\delta\frac{1}{\mu_{j}}(\nabla p_{j}-\rho_{j}g\nabla Z),
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Com isso se obtém a equação do escoamento abaixo :
  
 \end_layout
 
-\begin_layout Itemize
-A origem dos dados e como os mesmos são manipulados, devem estar no capítulo
- de metodologia.
- Coloque aqui os processamentos que foram realizados; resultados obtidos
- com sua manipulação/transformação.
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\frac{\partial}{\partial t}\left(\phi\sum_{j}^{N_{p}}\omega_{ij}\rho_{j}S_{j}\right) & =\frac{1}{r}\frac{\partial}{\partial r}\left[\sum_{j}^{N_{p}}\omega_{ij}\mathbf{k}_{j}\frac{\rho_{j}}{\mu_{j}}\left(r\frac{\partial p_{j}}{\partial r}-r\,\rho_{j}\,g\,\frac{\partial Z}{\partial r}\right)\right]\\
+ & \quad+\frac{1}{r^{2}}\frac{\partial}{\partial\theta}\left[\sum_{j}^{N_{p}}\omega_{ij}\mathbf{k}_{j}\frac{\rho_{j}}{\mu_{j}}\left(\frac{\partial p_{j}}{\partial\theta}-\rho_{j}\,g\,\frac{\partial Z}{\partial\theta}\right)\right]\\
+ & \quad+\frac{\partial}{\partial z}\left[\sum_{j}^{N_{p}}\omega_{ij}\mathbf{k}_{j}\frac{\rho_{j}}{\mu_{j}}\left(\frac{\partial p_{j}}{\partial z}-\rho_{j}\,g\,\frac{\partial Z}{\partial z}\right)\right]\\
+ & \quad+\sum_{j}^{N_{p}}\omega_{ij}\tilde{q}_{j}.
+\end{aligned}
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Neste capítulo só pode entrar o que você fez.
- Não coloque aqui trabalhos de terceiros, os mesmos devem ter sido incluídos
- ou na revisão bibliográfica ou na revisão conceitual; em alguns casos nos
- apêndices, mas nunca aqui!
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-ou seja, aqui entra efetivamente o que você fez!
+\begin_layout Standard
+Com as seguintes condições:
 \end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum_{j}^{N_{p}}S_{j}=1\quad\text{e}\quad\sum_{i}^{N_{c}}\omega_{ij}=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nas condições de reservatório o componente gás pode estar presente na fase gasosa,
+ como gás livre,
+ e na fase líquida,
+ com o gás dissolvido.
+\end_layout
+
+\begin_layout Standard
+O comportamento das fases no modelo black oil está descrito por uma série de propriedades que,
+ para um dado conjunto de componentes e uma temperatura do reservatório,
+ dependem apenas da pressão.
+ Estas propriedades são os fatores volume formação das fases,
+ 
+\begin_inset Formula $B_{o}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $B_{g}$
+\end_inset
+
+ e 
+\begin_inset Formula $B_{w}$
+\end_inset
+
+,
+ as viscosidades e as massas específicas das fases.
+ Onde os componentes da mistura de fluidos são 
+\begin_inset Formula $i=\bar{o},\bar{g},\bar{w}$
+\end_inset
+
+,
+ e podem estar contidos nas fases
+\begin_inset Formula $j=o,g,w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+B_{w}=\frac{V_{w}}{\overline{V}_{\bar{w}w}},\qquad B_{o}=\frac{V_{o}}{\overline{V}_{\bar{o}o}},\qquad B_{g}=\frac{V_{g}}{\overline{V}_{\bar{g}g}}.
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os processos de vaporização e dissolução de gás são modelados,
+ indiretamente,
+ pela variação de uma propriedade chamada razão de solubilidade,
+ 
+\begin_inset Formula $R_{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+R_{s}=\frac{V_{\bar{g}o}}{V_{\bar{o}o}}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em reservatórios de óleo volátil e gás úmido é possível usar a formulação com três pseudocomponentes,
+ com algumas modificações.
+ O modelo black oil modificado,
+ que é o modelo de simulação padrão atual da industria,
+ é similar ao modelo apresentado acima,
+ mas admite a presença do componente óleo dentro da fase gás,
+ nas condições de reservatório.
+\end_layout
+
+\begin_layout Standard
+É necessário escrever as massas específicas das fases e as concentrações mássicas dos componentes nas fases em função das propriedades PVT.
+ Para a água:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho_{w}=\frac{m_{\overline{w}w}}{V_{w}}=\frac{\rho_{w}^{STD}V_{\overline{w}w}}{V_{w}}=\frac{\rho_{w}^{STD}}{B_{w}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para fase óleo na condição de reservatório contém uma fração da massa do pseudocomponente gás,
+ chamada de gás dissolvido.
+ As massas específicas do gás livre e do gás dissolvido,
+ na condição padrão,
+ são iguais.
+ Levando isto em consideração:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho_{o}=\frac{m_{\overline{o}o}+m_{\overline{g}o}}{V_{o}}=\frac{\rho_{o}^{STD}V_{\overline{o}o}}{V_{o}}+\frac{\rho_{g}^{STD}V_{\overline{g}o}}{V_{o}}=\frac{1}{B_{o}}\left(\rho_{o}^{STD}+R_{s}\rho_{g}^{STD}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A massa específica da fase gás na condição de reservatório,
+ está dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho_{g}=\frac{m_{\overline{g}g}}{V_{g}}=\frac{\rho_{g}^{STD}V_{\overline{g}g}}{V_{g}}=\frac{\rho_{g}^{STD}}{B_{g}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por construção
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\omega_{\bar{w}w}=1\quad\text{e}\quad\omega_{\bar{g}w}=\omega_{\bar{o}w}=\omega_{\bar{w}g}=\omega_{\bar{w}o}=0
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dentro da fase óleo se encontram os componentes óleo e gás (dissolvido),
+ nas seguintes proporções:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\omega_{\bar{o}o}=\frac{m_{\bar{o}o}}{m_{\bar{o}o}+m_{\bar{g}o}}=\frac{\rho_{o}^{STD}V_{\bar{o}o}}{\rho_{o}V_{o}}=\frac{\rho_{o}^{STD}}{\rho_{o}}\frac{1}{B_{o}},\\
+\omega_{\bar{g}o}=\frac{m_{\bar{g}o}}{m_{\bar{o}o}+m_{\bar{g}o}}=\frac{\rho_{g}^{STD}V_{\bar{g}o}}{\rho_{o}V_{o}}\frac{V_{\bar{g}o}}{V_{\bar{o}o}}=\frac{\rho_{g}^{STD}}{\rho_{o}}\frac{R_{s}}{B_{o}}
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A massa específica da fase gás na condição de reservatório,
+\end_layout
+
+\begin_layout Standard
+está dada por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+\omega_{\bar{g}g}=1\\
+\omega_{\bar{o}g}=0
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As permeabilidades efetivas das fases,
+ 
+\begin_inset Formula $\mathbf{k}_{j}$
+\end_inset
+
+,
+ podem ser calculadas através das permeabilidades relativas,
+ determinadas experimentalmente ou por um modelo teórico,
+ como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{k}_{j}=\mathbf{k}k_{rj}(S_{w},S_{g})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No caso do escoamento trifásico de água,
+ óleo e gás,
+ assume-se que as permeabilidades relativas obedecem às seguintes dependências funcionais das saturações:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{gather*}
+k_{rw}=k_{rw}(S_{w}),\,k_{rg}=k_{rg}(S_{g}),\,k_{ro}=k_{ro}(S_{w},S_{g}).
+\end{gather*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As pressões das fases estão relacionadas através das curvas de pressão capilar,
+ de acordo com as seguintes expressões:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{w}=p_{o}-p_{cow}(S_{w})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{g}=p_{o}+p_{cgo}(S_{g})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As equações de fluxo básico para cada componente é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\alpha_{c}\frac{\partial}{\partial t}(\phi b_{w}S_{w}) & =\beta_{c}\frac{1}{r}\frac{\partial}{\partial r}\left\{ r\,\mathbf{k}k_{rw}\,\frac{b_{w}}{\mu_{w}}\left[\frac{\partial}{\partial r}(p_{o}-p_{cow})-\gamma_{c}\rho_{w}\,g\frac{\partial Z}{\partial r}\right]\right\} \\
+ & +\beta_{c}\frac{1}{r^{2}}\frac{\partial}{\partial\theta}\left\{ \mathbf{k}k_{rw}\frac{b_{w}}{\mu_{w}}\left[\frac{\partial}{\partial\theta}(p_{o}-p_{cow})-\gamma_{c}\rho_{w}\,g\frac{\partial Z}{\partial\theta}\right]\right\} \\
+ & +\beta_{c}\frac{\partial}{\partial z}\left\{ \mathbf{k}k_{rw}\frac{b_{w}}{\mu_{w}}\left[\frac{\partial}{\partial z}(p_{o}-p_{cow})-\gamma_{c}\rho_{w}\,g\frac{\partial Z}{\partial z}\right]\right\} \\
+ & +\frac{b_{w}}{\rho_{w}}\tilde{q}_{w}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\alpha_{c}\frac{\partial}{\partial t}[\phi b_{o}(1-S_{w}-S_{g})+\phi R_{v}b_{g}S_{g}] & =\beta_{c}\frac{1}{r}\frac{\partial}{\partial r}\left[r\,\mathbf{k}k_{ro}\frac{b_{o}}{\mu_{o}}\left(\frac{\partial}{\partial r}p_{o}-\gamma_{c}\,\rho_{o}\,g\,\frac{\partial Z}{\partial r}\right)\right]\\
+ & +\beta_{c}\frac{1}{r^{2}}\frac{\partial}{\partial\theta}\left[\mathbf{k}k_{ro}\frac{b_{o}}{\mu_{o}}\left(\frac{\partial}{\partial\theta}p_{o}-\gamma_{c}\,\rho_{o}\,g\,\frac{\partial Z}{\partial\theta}\right)\right]\\
+ & +\beta_{c}\frac{\partial}{\partial z}\left[\mathbf{k}k_{ro}\frac{b_{o}}{\mu_{o}}\left(\frac{\partial}{\partial z}p_{o}-\gamma_{c}\,\rho_{o}\,g\,\frac{\partial Z}{\partial z}\right)\right]\\
+ & +\beta_{c}\frac{1}{r}\frac{\partial}{\partial r}\left\{ r\,\mathbf{k}k_{rg}\frac{R_{v}b_{g}}{\mu_{g}}\left[\frac{\partial}{\partial r}(p_{o}+p_{cgo})-\gamma_{c}\,\rho_{g}\,g\,\frac{\partial Z}{\partial r}\right]\right\} \\
+ & +\beta_{c}\frac{1}{r^{2}}\frac{\partial}{\partial\theta}\left\{ \mathbf{k}k_{rg}\frac{R_{v}b_{g}}{\mu_{g}}\left[\frac{\partial}{\partial\theta}(p_{o}+p_{cgo})-\gamma_{c}\,\rho_{g}\,g\,\frac{\partial Z}{\partial\theta}\right]\right\} \\
+ & +\beta_{c}\frac{\partial}{\partial z}\left\{ \mathbf{k}k_{rg}\frac{R_{v}b_{g}}{\mu_{g}}\left[\frac{\partial}{\partial z}(p_{o}+p_{cgo})-\gamma_{c}\,\rho_{g}\,g\,\frac{\partial Z}{\partial z}\right]\right\} \\
+ & +\frac{b_{o}}{\rho_{o}}\tilde{q}_{o}+\frac{R_{v}b_{g}}{\rho_{g}}\tilde{q}_{g}
+\end{aligned}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\alpha_{c}\frac{\partial}{\partial t}[\phi b_{g}S_{g}+\phi R_{s}b_{o}(1-S_{w}-S_{g})] & =\beta_{c}\frac{1}{r}\frac{\partial}{\partial r}\left\{ r\,\mathbf{k}k_{rg}\frac{b_{g}}{\mu_{g}}\left[\frac{\partial}{\partial r}(p_{o}+p_{cgo})-\gamma_{c}\,\rho_{g}\,g\,\frac{\partial Z}{\partial r}\right]\right\} \\
+ & +\beta_{c}\frac{1}{r^{2}}\frac{\partial}{\partial\theta}\left\{ \mathbf{k}k_{rg}\frac{b_{g}}{\mu_{g}}\left[\frac{\partial}{\partial\theta}(p_{o}+p_{cgo})-\gamma_{c}\,\rho_{g}\,g\,\frac{\partial Z}{\partial\theta}\right]\right\} \\
+ & +\beta_{c}\frac{\partial}{\partial z}\left\{ \mathbf{k}k_{rg}\frac{b_{g}}{\mu_{g}}\left[\frac{\partial}{\partial z}(p_{o}+p_{cgo})-\gamma_{c}\,\rho_{g}\,g\,\frac{\partial Z}{\partial z}\right]\right\} \\
+ & +\frac{b_{g}}{\rho_{g}}\tilde{q}_{g}
+\end{aligned}
+\end{equation}
 
 \end_inset
 
